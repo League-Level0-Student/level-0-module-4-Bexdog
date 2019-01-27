@@ -18,6 +18,24 @@ void draw(){
     lefteyeY = 370;}
     else{
     lefteyeY = mouseY;}
+  
+  int righteyeX;
+  if (mouseX<580){
+   righteyeX = 580;}
+    else if (mouseX>600){
+    righteyeX = 600;}
+    else{
+    righteyeX = mouseX;}
+    
+    int righteyeY;
+  if (mouseY<315){
+    righteyeY = 315;}
+    else if (mouseY >335){
+    righteyeY = 335;}
+    else{
+    righteyeY = mouseY;}
+  
+  
   background(face);
   fill(255,255,255);
   ellipse(445,360,40,40);
@@ -27,7 +45,7 @@ void draw(){
   fill(255,255,255);
   ellipse(590,325,40,40);
   fill(3,0,0);
-  ellipse(590,325,15,15);
+  ellipse(righteyeX,righteyeY,15,15);
   
   
   
