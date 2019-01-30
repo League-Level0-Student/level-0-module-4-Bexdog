@@ -21,14 +21,18 @@ void setup(){
 }
 
 void draw(){
-  
+ 
+  background(140);
+  fill(255,0,0);
   creeper.resize(200,200);
   image(creeper, x, y);
  
-  background(bush);
+  //background(bush); //this doesn't work with alpha
+  image(bush,0,0); //this works with alpha
+  
   if(mousePressed)
   {
-    if(isNear(mouseX,600))   //try checking near both mouseX and mouseY
+    if((isNear(mouseX,600)&&isNear(mouseY,300)))   //try checking near both mouseX and mouseY
     {
       fill(54,255,0);
       println("you found the creeper");
