@@ -1,11 +1,13 @@
+int bob = (int)random(700);
+int Bob = (int)random(700);
 PImage creeper;
 PImage bush;
-int x = 600;
-int y = 300;
+int x = bob;
+int y = Bob;
 
 boolean isNear(int a, int b)
 {
-  if (abs(a - b) < 10)
+  if (abs(a - b) < 20)
      return true;
   else
      return false;
@@ -17,7 +19,7 @@ void setup(){
   bush = loadImage("bush.png");
   bush.resize(900,900);
   //background(bush);
-     
+   creeper.resize(60,60); 
 }
 
 void draw(){
@@ -32,7 +34,7 @@ void draw(){
   
   if(mousePressed)
   {
-    if((isNear(mouseX,600)&&isNear(mouseY,300)))   //try checking near both mouseX and mouseY
+    if((isNear(mouseX,bob)&&isNear(mouseY,Bob)))   //try checking near both mouseX and mouseY
     {
       fill(54,255,0);
       println("you found the creeper");
